@@ -1,0 +1,16 @@
+# IDE
+.vscode/
+.idea/
+.vs/
+
+# files with no extension
+src/gc/*
+!src/gc/*.*
+!src/gc/Makefile
+
+# CMake
+out/
+build/
+install/
+.cache/
+cmake-build-*/
