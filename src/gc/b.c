@@ -7,10 +7,12 @@
 
 char buffer[4096];
 
+#define ADDRESS "127.0.0.1"
+
 int main(void) {
     struct sockaddr_in local;
     local.sin_family = AF_INET;
-    inet_pton(AF_INET, "0.0.0.0", &local.sin_addr);
+    inet_pton(AF_INET, ADDRESS, &local.sin_addr);
     local.sin_port = htons(6969);
 
     int sock = socket(AF_INET, SOCK_STREAM, 0);

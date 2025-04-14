@@ -29,6 +29,7 @@ int main(void) {
     connect(sock, (void *)&remote, sizeof(remote));
     write(sock, buffer, sizeof(buffer));
 
+    /*
     shutdown(sock, SHUT_WR);
     for (;;) {
         int res = read(sock, buffer, 4000);
@@ -40,6 +41,7 @@ int main(void) {
             break;
         }
     }
+    */
 
     close(sock);
     return 0;
