@@ -3,9 +3,14 @@
 .idea/
 .vs/
 
+*~
+_*
+*.o
+*.d
+
 # files with no extension
 src/gc/*
-!src/gc/*.*
+!src/gc/*.c
 !src/gc/Makefile
 
 # CMake
@@ -14,3 +19,4 @@ build/
 install/
 .cache/
 cmake-build-*/
+

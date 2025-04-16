@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main(void) {
-	float b;
-	int a;
-	printf("a: %d, b: %f\n", a, b);
+    int alonglongint=123256478;
+    long x = 470020878965;
+    puts((void *)&x);
+    return 0;
 }
+
