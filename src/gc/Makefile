@@ -14,3 +14,6 @@ a: a.c
 
 b: b.c
 	$(CC) $(CFLAGS) -o b b.c
+
+clean:
+	rm *.txt a b dynamic test heap

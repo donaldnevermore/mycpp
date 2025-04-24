@@ -4,9 +4,7 @@
 .vs/
 
 *~
-_*
-*.o
-*.d
+*.[oa]
 
 # files with no extension
 src/gc/*
@@ -19,4 +17,4 @@ build/
 install/
 .cache/
 cmake-build-*/
-
+.compile_commands.json
