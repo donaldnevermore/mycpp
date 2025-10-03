@@ -1,4 +1,4 @@
-CFLAGS=-Wall -Wextra -std=c2x -ggdb
+CFLAGS=-Wall -Wextra -std=c11 -ggdb
 
 heap: main.c
 	$(CC) $(CFLAGS) -o heap main.c
