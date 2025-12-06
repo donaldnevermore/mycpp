@@ -16,6 +16,7 @@ int main(void) {
 
     int sock = socket(AF_INET, SOCK_STREAM, 0);
 
+    // This isn't helpful.
     // struct linger so_linger;
     // so_linger.l_onoff = true;
     // so_linger.l_linger = 30;
@@ -29,6 +30,7 @@ int main(void) {
     connect(sock, (void *)&remote, sizeof(remote));
     write(sock, buffer, sizeof(buffer));
 
+    // Uncomment to fix it.
     /*
     shutdown(sock, SHUT_WR);
     for (;;) {

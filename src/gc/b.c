@@ -7,7 +7,7 @@
 
 char buffer[4096];
 
-#define ADDRESS "127.0.0.1"
+#define ADDRESS "0.0.0.0"
 
 int main(void) {
     struct sockaddr_in local;
@@ -20,14 +20,16 @@ int main(void) {
     listen(sock, 128);
     int client = accept(sock, NULL, NULL);
 
-    write(client, "220 Welcom\r\n", 13); // reproduce the problem
+    // needed to reproduce the problem
+    write(client, "220 Welcome\r\n", 13);
 
     int bytesRead = 0, res;
     for (;;) {
-        res = read(sock, buffer, sizeof(buffer));
+        res = read(client, buffer, sizeof(buffer));
         if (res < 0) {
             perror("read");
             // exit(1);
+            break;
         }
         if (!res) {
             break;
