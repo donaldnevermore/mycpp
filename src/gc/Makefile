@@ -1,4 +1,4 @@
-CFLAGS=-Wall -Wextra -std=c11 -ggdb
+CFLAGS=-Wall -Wextra -ggdb
 
 all: heap
 

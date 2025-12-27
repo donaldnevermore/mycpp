@@ -1,7 +1,4 @@
 BasedOnStyle: LLVM
 IndentWidth: 4
 ColumnLimit: 120
-AlignAfterOpenBracket: DontAlign
-AlignTrailingComments: false
-AllowShortFunctionsOnASingleLine: None
-InsertBraces: true
+AlignEscapedNewlines: Left
